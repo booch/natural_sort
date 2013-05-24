@@ -31,6 +31,8 @@ def sort(list_to_sort, keys_to_sort_on=None):
         If the list_to_sort contains strings, the `keys_to_sort_on` is ignored.
         WARNING: We assume that the list_to_sort is homogeneous.
     '''
+    if not list_to_sort:
+        return list_to_sort
     if type(list_to_sort[0]) is str:
         return sort_strings(list_to_sort)
     if not keys_to_sort_on:
