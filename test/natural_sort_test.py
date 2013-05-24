@@ -46,6 +46,9 @@ class NaturalSortTestCase(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_sorting_empty_list(self):
+        assert(natural_sort.sort([]) == [])
+
     def test_sorting_list_of_strings(self):
         expected_result = [
             '1.2.2',
