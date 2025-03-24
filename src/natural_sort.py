@@ -134,7 +134,7 @@ def _multi_key_sort(list_to_sort, keys_to_sort_on, normalization_functions={}):
             result = cmp(func(left_value), func(right_value))
             if result:
                 return polarity * result
-        else:
+        else:  # Yes, this is indented correctly. See https://book.pythontips.com/en/latest/for_-_else.html
             return 0
     return sorted(list_to_sort, cmp=comparer)
 
